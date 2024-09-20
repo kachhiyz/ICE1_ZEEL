@@ -62,6 +62,7 @@ public class CardTrick {
                 cardFound = true;
                 break;
             }
+=======
         }
                         // Hard-coded lucky card
         Card luckyCard = new Card();
@@ -73,6 +74,34 @@ public class CardTrick {
         if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
         luckyCardFound = true;
         break;
+    }
+}
+
+
+    if (luckyCardFound) {
+        System.out.println("The lucky card (7 of Hearts) is in the magic hand!");
+    } else {
+        System.out.println("The lucky card (7 of Hearts) is not in the magic hand.");
+    }
+
+        
+        // Report the result
+        if (cardFound) {
+            System.out.println("Congratulations! Your card is in the magic hand!");
+        } else {
+            System.out.println("Sorry, your card is not in the magic hand.");
+        }
+                        // Hard-coded lucky card
+        Card luckyCard = new Card();
+        luckyCard.setValue(7); // Lucky card value: 7
+        luckyCard.setSuit("Hearts"); // Lucky card suit: Hearts
+        boolean luckyCardFound = false;
+        for (Card c : magicHand) {
+        if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
+        luckyCardFound = true;
+        break;
+=======
+        scanner.close();
     }
 }
 
